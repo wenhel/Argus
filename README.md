@@ -5,22 +5,22 @@ Argus is an AI Surveillance System for Spatial-Temporal Activity Detection in Su
 
 The prototype system was first implemented for SED project start from 2017. The code of the pipeline is developed as a docker based system. Later in the ACTEV Challenge we merge the system with the ACTEV CLI an created the current system Argus. [Argus](https://en.wikipedia.org/wiki/Argus_Panoptes) is a many-eyed giant in Greek mythology.
 
-![Leaderboard of Phase 1](intro/leaderboad.png)
+![Leaderboard of Phase 1](https://github.com/wenhel/Argus/blob/master/Intro/leaderboad.png)
 
 ## The Architecture
-![Architecture](intro/pipeline_sx.png)
+![Architecture](https://github.com/wenhel/Argus/blob/master/Intro/pipeline_sx.png)
 
 ## Run with the ACTEV CLI
-![Run with the ACTEV CLI Part 1](intro/pipeline_s1.png)
-![Run with the ACTEV CLI Part 2](intro/pipeline_s2.png)
+![Run with the ACTEV CLI Part 1](https://github.com/wenhel/Argus/blob/master/Intro/pipeline_s1.png)
+![Run with the ACTEV CLI Part 2](https://github.com/wenhel/Argus/blob/master/Intro/pipeline_s2.png)
 
 ## Implementation
 ### Running with Dockerized Models
-![GPU Management](intro/pipeline_s4.png)
+![GPU Management](https://github.com/wenhel/Argus/blob/master/Intro/pipeline_s4.png)
 
 ### GPU Management
-![GPU Management](intro/pipeline_s3.png)
+![GPU Management](https://github.com/wenhel/Argus/blob/master/Intro/pipeline_s3.png)
 
 
 ## The Current Pipeline
-![Architecture](intro/actev_pipeline.png )
+![Architecture](https://github.com/wenhel/Argus/blob/master/Intro/actev_pipeline.png )
