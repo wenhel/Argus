@@ -1,7 +1,7 @@
 
 
 ## Introduction
-![image](https://github.com/wenhel/Argus/blob/master/argus.jpg)
+![image](https://github.com/wenhel/Argus/blob/master/argus.jpg=250x)
 Argus is an AI Surveillance System for Spatial-Temporal Activity Detection in Surveillance Scenarios. In [ACTEV Challenge 2019](https://actev.nist.gov/prizechallenge#tab_leaderboard), two teams used the system, they are MUDSML from Monash University and INF from Carnegie Mellon University. This system helps them win the first and the second place in the Phase 1 challenge. 
 
 The [prototype system](https://github.com/wenhel/fruit_tree) was first implemented for SED (Surveillance Event Detection) project from 2017. Our original target is to build an a docker based video analysis system. Later in the ACTEV Challenge we merge the system with the ACTEV CLI an created the current system, Argus. [Argus](https://en.wikipedia.org/wiki/Argus_Panoptes) is a many-eyed giant in Greek mythology.
