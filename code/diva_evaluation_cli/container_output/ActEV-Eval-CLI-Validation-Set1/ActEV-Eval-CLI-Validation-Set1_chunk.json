@@ -1,0 +1,30 @@
+{
+  "Chunk1": {
+    "activities": [
+      "Open_Trunk",
+      "Exiting",
+      "specialized_talking_phone",
+      "Entering",
+      "specialized_texting_phone",
+      "Closing_Trunk",
+      "Opening",
+      "Transport_HeavyCarry",
+      "vehicle_u_turn",
+      "Closing",
+      "Loading",
+      "vehicle_turning_right",
+      "activity_carrying",
+      "vehicle_turning_left",
+      "Pull",
+      "Unloading",
+      "Talking",
+      "Riding"
+    ],
+    "files": [
+      "VIRAT_S_040003_02_000197_000552.mp4",
+      "VIRAT_S_000206_02_000294_000327.mp4",
+      "2018-03-14.07-30-04.07-35-04.G336.avi",
+      "VIRAT_S_040100_03_000496_000559.mp4"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+"""Entry point module: pre-process-chunk
+
+Implements the entry-point by using Python or any other languages.
+
+"""
+import os
+
+def entry_point(chunk_id, system_cache_dir):
+    """Method to complete: you have to raise an exception if an error occured in the program.
+
+    Pre-process a chunk.
+
+    Args:
+        chunk_id (str): Chunk id
+        system_cache_dir (str): Path to system cache directory
+
+    """
+    # go into the right directory to execute the script
+    path = os.path.dirname(__file__)
+    script = os.path.join(path, '../implementation/pre_process_chunk.sh')
+
+    # execute the script
+    # status is the exit status code returned by the program
+    status = os.system("%s %s" % (script, chunk_id))
+    if status != 0:
+    	raise Exception("Error occured in pre_process_chunk.sh")

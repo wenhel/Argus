@@ -1,0 +1,24 @@
+# person_c3d.yaml
+# REQUIRE config.yaml
+
+dockermodel:
+  # or name of docker_image
+  dir: 'somewhere'
+  image: 'actev_objdet_tracking' 
+  tag: 'v5'
+  name: Null
+  type: 'nvidia_docker'
+  option: 
+    ['--rm']
+  volume: 
+    '-v': 
+      - !!python/object/apply:string.join [[*DATA_DIR, '/result','rw'],':']
+      - !!python/object/apply:string.join [[*VIDEO_DIR, '/data/video','rw'],':']
+  sub_parameters:
+     'python': '/app/obj_detect_tracking.py'
+    # '--video_dir': *VIDEO_DIR
+    # '--video_lst_file': 'vid.lst'
+    # '--out_dir': *OBJ_DIR
+    # '--frame_gap':1
+  nvidia_parameters: 
+        'NV_GPU': *NV_GPU

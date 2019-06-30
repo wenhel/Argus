@@ -1,0 +1,27 @@
+# person_c3d.yaml
+# REQUIRE config.yaml
+
+dockermodel:
+  # or name of docker_image
+  dir: 'somewhere'
+  image: 'actev_prop'
+  tag: 'v1'
+  name: Null
+  type: 'docker'
+  option: 
+    ['--rm']
+  volume: 
+    '-v': 
+      - !!python/object/apply:string.join [[*DATA_DIR, '/result','rw'],':']
+      - !!python/object/apply:string.join [[*VIDEO_DIR, '/data/video'],':']
+      - !!python/object/apply:string.join [[!!python/object/apply:string.join [[*CACHE_DIR,  'actev_prop'],'/'], '/tmp','rw'],':']
+  sub_parameters:
+    '--video_list_fn': '/result/video.lst'
+    '--tracklet_root_path': '/result/actev_tracking/'
+    '--video_root_path': '/data/video/'
+    '--anno_root_path': '/result/actev_prop/annotations/'
+    '--traj_img_root_path': '/result/actev_prop/trajectory_images/'
+    '--props_list_fn': '/result/actev_prop/props_list.lst'
+    '--tmp_root_path': '/data/tmp/'
+  # nvidia_parameters: 
+        # 'NV_GPU': *NV_GPU

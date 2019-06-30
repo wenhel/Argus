@@ -1,0 +1,29 @@
+
+log:
+  FLAG: 'FILE'
+  FILE_CONFIG:
+    name: 'diva_log_file' ## not used
+    filename: 'pipeline.log' ## not used
+    directory: 'pipeline_file' ## not used
+
+directory:
+  DATA_DIR : &DATA_DIR '/mnt/results/Chunk1'
+  VIDEO_DIR : &VIDEO_DIR '/home/ubuntu/datasets/ActEV-Eval-CLI-Validation-Set1/video/'
+  CACHE_DIR: &CACHE_DIR '/mnt'
+  LOG_DIR: &LOG_DIR '/mnt/log'
+
+    
+nvida_docker:
+        NV_GPU : &NV_GPU [0,1,2,3]
+
+pipeline:
+  name: &PIPENAME 'pipeline_test'
+  preprocess:
+    - actev_ubuntu
+  sequence:
+          #- actev_objdet_tracking
+          #- actev_prop
+          #- actev_i3d_rgb
+          #- actev_conv_rnn
+    - p1b_conv_rnn
+  parallel: True

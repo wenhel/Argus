@@ -1,0 +1,22 @@
+# person_c3d.yaml
+# REQUIRE config.yaml
+
+dockermodel:
+  # or name of docker_image
+  dir: 'somewhere'
+  image: 'actev_i3d_rgb'
+  tag: 'v1'
+  name: Null
+  type: 'nvidia_docker'
+  option: 
+    ['--rm']
+  volume: 
+    '-v': 
+      - !!python/object/apply:string.join [[*DATA_DIR, '/result','rw'],':']
+      # - !!python/object/apply:string.join [[*VIDEO_DIR, '/data/video'],':']
+  sub_parameters:
+    '--props_list_fn': '/result/actev_prop/vid/props_list.lst'
+    '--traj_img_root_path': '/result/vid/actev_prop/trajectory_images'
+    '--dst_feat_root_path': 'result/actev_i3d_rgb/vid'
+  nvidia_parameters: 
+        'NV_GPU': *NV_GPU

@@ -1,0 +1,6 @@
+ACTIVITY_INDEX: /home/wenhe/json/indexes/1B-activity-index.json
+CHUNK: /mnt/sdb1/wenhel/diva_evaluation_cli_opensource/Cache/val54_file-index_first4v2/result/chunk.json
+FILE_INDEX: /home/wenhe/json/indexes/val54_file-index_first4.json
+NIST_CONFIG_OUTDIR: /mnt/sdb1/wenhel/diva_evaluation_cli_opensource/diva_evaluation_cli/src/implementation/pipeline/config
+SYSTEM_CACHE_DIRECTORY: /mnt/sdb1/wenhel/diva_evaluation_cli_opensource/Cache/val54_file-index_first4v2
+VIDEO_DIR: /mnt/sdb1/wenhel/videos/

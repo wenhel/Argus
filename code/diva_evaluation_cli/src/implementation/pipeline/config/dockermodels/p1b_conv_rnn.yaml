@@ -1,0 +1,27 @@
+# person_c3d.yaml
+# REQUIRE config.yaml
+
+dockermodel:
+  # or name of docker_image
+  dir: 'somewhere'
+  image: 'p1b_conv_rnn'
+  tag: 'v1'
+  name: Null
+  type: 'nvidia_docker'
+  option: 
+    ['--rm']
+  volume: 
+    '-v': 
+      - !!python/object/apply:string.join [[*DATA_DIR, '/result','rw'],':']
+      - !!python/object/apply:string.join [[*VIDEO_DIR, '/data/video'],':']
+      - !!python/object/apply:string.join [[!!python/object/apply:string.join [[*CACHE_DIR,  'p1b_conv_rnn'],'/'], '/tmp','rw'],':']
+  sub_parameters:
+    # 'python':  '/app/birnn.py'
+    # '--feature_dir': '/result/actev_i3d_flow_xiaojun/vid'
+    # '--anno_dir': '/result/actev_prop/vid/annotations/'
+    # '--scene_det_dir': '/result/actev_scene_det/vid'
+    # '--video_lst_file': '/result/vid.lst'
+    # '--tmp_dir': '/data/tmp/'
+    # '--out_dir': '/result/actev_i3d_flow_birnn'
+  nvidia_parameters: 
+        'NV_GPU': *NV_GPU
